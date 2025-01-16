@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const agendaController_1 = require("../controllers/agendaController");
+const router = (0, express_1.Router)();
+router.get('/', agendaController_1.listarCompromissos);
+router.post('/', agendaController_1.adicionarCompromisso);
+router.put('/:id', agendaController_1.atualizarCompromisso);
+router.delete('/:id', agendaController_1.excluirCompromisso);
+exports.default = router;
